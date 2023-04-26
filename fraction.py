@@ -1,7 +1,7 @@
-#poprawione
+# poprawione
 class Fraction:
 
-    counter = 0
+    _counter = 0
 
     def __init__(self, *args):
         arg_len = len(args)
@@ -15,7 +15,11 @@ class Fraction:
             self.m = 1
         else:
             raise ValueError("Too many arguments")
-        Fraction.counter += 1
+        Fraction._counter += 1
+
+    @staticmethod
+    def get_counter():
+        return Fraction._counter
 
     def __mul__(self, other):
         return Fraction(self.l1 * other.l1, self.m * other.m)
@@ -34,7 +38,7 @@ class Fraction:
         return str(self.l1) + "/" + str(self.m)
 
     def __del__(self):
-        Fraction.counter -= 1
+        Fraction._counter -= 1
 
     @staticmethod
     def nww(a, b):
@@ -60,7 +64,7 @@ def main():
     print(b)
     c.reduction()
     print(c)
-    print("Counter:", c.counter)
+    print("Counter:", Fraction.get_counter())
 
 
 if __name__ == "__main__":
