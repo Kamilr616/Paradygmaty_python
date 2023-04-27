@@ -23,7 +23,7 @@ def wspolne_litery(lst1):
 
 
 def list_add(lst1, el):
-    return reduce(lambda acc, y: acc + [el, y] if y >= el and el not in acc else acc + [y], lst1, [])
+    return reduce(lambda x, y: x + [el, y] if y >= el and el not in x else x + [y], lst1, [])
 
 
 def main():
