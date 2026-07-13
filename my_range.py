@@ -18,14 +18,9 @@ def my_range(*args):
         raise ValueError("Illegal arg count")
     result = []
 
-    if step < 0.0:
-        while stop > start:
-            result.append(stop)
-            stop += step
-    else:
-        while start < stop:
-            result.append(start)
-            start += step
+    while (step > 0 and start < stop) or (step < 0 and start > stop):
+        result.append(start)
+        start += step
     return result
 
 

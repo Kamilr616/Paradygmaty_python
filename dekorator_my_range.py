@@ -28,8 +28,10 @@ def my_range(*args):
         step = 1.0
     else:
         raise ValueError("Illegal arg count")
+    if step == 0:
+        raise ValueError("Step == 0")
     result = []
-    while start < stop:
+    while (step > 0 and start < stop) or (step < 0 and start > stop):
         result.append(start)
         start += step
     return result

@@ -16,14 +16,9 @@ def generate(*args):
         step = 1.0
     else:
         raise ValueError("Illegal arg count")
-    if step < 0.0:
-        while stop > start:
-            yield stop
-            stop += step
-    else:
-        while start < stop:
-            yield start
-            start += step
+    while (step > 0 and start < stop) or (step < 0 and start > stop):
+        yield start
+        start += step
 
 
 def main():

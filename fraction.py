@@ -4,6 +4,7 @@ class Fraction:
     _counter = 0
 
     def __init__(self, *args):
+        self._counted = False
         arg_len = len(args)
         if arg_len == 2:
             self.l1 = args[0]
@@ -15,7 +16,11 @@ class Fraction:
             self.m = 1
         else:
             raise ValueError("Too many arguments")
+        if self.m == 0:
+            raise ZeroDivisionError("The denominator cannot be zero")
+        self.reduction()
         Fraction._counter += 1
+        self._counted = True
 
     @staticmethod
     def get_counter():
@@ -38,7 +43,8 @@ class Fraction:
         return str(self.l1) + "/" + str(self.m)
 
     def __del__(self):
-        Fraction._counter -= 1
+        if getattr(self, "_counted", False):
+            Fraction._counter -= 1
 
     @staticmethod
     def nww(a, b):
@@ -46,6 +52,7 @@ class Fraction:
 
     @staticmethod
     def nwd(a, b):
+        a, b = abs(a), abs(b)
         while b != 0:
             a, b = b, a % b
         return a
@@ -54,6 +61,9 @@ class Fraction:
         nwd = Fraction.nwd(self.l1, self.m)
         self.l1 = self.l1 // nwd
         self.m = self.m // nwd
+        if self.m < 0:
+            self.l1 = -self.l1
+            self.m = -self.m
 
 
 def main():

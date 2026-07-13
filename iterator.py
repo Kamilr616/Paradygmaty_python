@@ -23,26 +23,17 @@ class My_range:
             raise ValueError("Error: Too many arguments")
 
     def __iter__(self):
-
-        if self.step < 0.0:
-            self.n = self.stop
-        else:
-            self.n = self.start
+        self.n = self.start
         return self
 
     def __next__(self):
 
-        if self.n > self.start and self.step < 0.0:
+        if ((self.step > 0 and self.n < self.stop) or
+                (self.step < 0 and self.n > self.stop)):
             result = self.n
             self.n += self.step
             return result
-
-        elif self.n < self.stop and self.step > 0.0:
-            result = self.n
-            self.n += self.step
-            return result
-        else:
-            raise StopIteration
+        raise StopIteration
 
 
 def main():

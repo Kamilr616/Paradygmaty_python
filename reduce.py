@@ -3,15 +3,19 @@ from functools import reduce
 
 
 def mean(lst):
+    if not lst:
+        raise ValueError("Cannot calculate the mean of an empty list")
     return reduce(lambda x, y: x + y, lst)/len(lst)
 
 
 def largest_el(lst):
+    if not lst:
+        raise ValueError("Cannot select an element from an empty list")
     return reduce(lambda x, y: x if x > y else y, lst)
 
 
 def splaszcz(lst):
-    return list(reduce(lambda x, y: x + y, lst))
+    return reduce(lambda x, y: x + y, lst, [])
 
 
 def manhattan(lst1, lst2):
@@ -19,11 +23,15 @@ def manhattan(lst1, lst2):
 
 
 def wspolne_litery(lst1):
-    return list(reduce(lambda x, y: x & y, map(set, lst1)))
+    sets = list(map(set, lst1))
+    return list(reduce(lambda x, y: x & y, sets[1:], sets[0])) if sets else []
 
 
 def list_add(lst1, el):
-    return reduce(lambda x, y: x + [el, y] if y >= el and el not in x else x + [y], lst1, [])
+    if el in lst1:
+        return list(lst1)
+    result = reduce(lambda x, y: x + [el, y] if y >= el and el not in x else x + [y], lst1, [])
+    return result if el in result else result + [el]
 
 
 def main():
