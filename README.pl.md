@@ -7,7 +7,9 @@
 
 > 🗓️ **Okres realizacji:** 2023
 
-Zbiór rozwiązanych zadań z przedmiotu **Paradygmaty Programowania**. Każdy skrypt to samodzielne rozwiązanie demonstrujące konkretny koncept Pythona — od podstawowych algorytmów i rekurencji, przez programowanie obiektowe, po iteratory, generatory, dekoratory i programowanie funkcyjne. Kurs obejmował style **imperatywny, obiektowy i funkcyjny** w Pythonie, więc repo stanowi też zwięzły przegląd tych podstaw.
+> 📘 [Dokumentacja techniczna](docs/TECHNICAL_DOCUMENTATION.pl.md) · [English](docs/TECHNICAL_DOCUMENTATION.md)
+
+Zbiór rozwiązanych zadań z przedmiotu **Paradygmaty Programowania**. Większość skryptów to samodzielne rozwiązania demonstrujące konkretny koncept Pythona — od podstawowych algorytmów i rekurencji, przez programowanie obiektowe, po iteratory, generatory, dekoratory i programowanie funkcyjne. Kurs obejmował style **imperatywny, obiektowy i funkcyjny** w Pythonie, więc repo stanowi też zwięzły przegląd tych podstaw.
 
 ## 📚 Omawiane zagadnienia
 
@@ -38,6 +40,12 @@ python bisekcja.py
 ```
 
 Nie są wymagane żadne zewnętrzne zależności (wyłącznie biblioteka standardowa Pythona 3).
+
+Testy regresyjne uruchomisz poleceniem:
+
+```bash
+python -m unittest discover -s tests -v
+```
 
 ## 📄 Licencja
 

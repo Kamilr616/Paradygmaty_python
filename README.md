@@ -7,7 +7,9 @@
 
 > 🗓️ **Project period:** 2023
 
-A collection of solved exercises from the **Programming Paradigms** university course. Each script is a self-contained solution demonstrating a specific Python concept — from basic algorithms and recursion to object-oriented programming, iterators, generators, decorators, and functional programming. The course spanned the **imperative, object-oriented and functional** styles in Python, so this repo doubles as a compact reference of those fundamentals.
+> 📘 [Technical documentation](docs/TECHNICAL_DOCUMENTATION.md) · [Polski](docs/TECHNICAL_DOCUMENTATION.pl.md)
+
+A collection of solved exercises from the **Programming Paradigms** university course. Most scripts are self-contained solutions demonstrating a specific Python concept — from basic algorithms and recursion to object-oriented programming, iterators, generators, decorators, and functional programming. The course spanned the **imperative, object-oriented and functional** styles in Python, so this repo doubles as a compact reference of those fundamentals.
 
 ## 📚 Topics covered
 
@@ -38,6 +40,12 @@ python bisekcja.py
 ```
 
 No external dependencies are required (Python 3 standard library only).
+
+Run the regression tests with:
+
+```bash
+python -m unittest discover -s tests -v
+```
 
 ## 📄 License
 
