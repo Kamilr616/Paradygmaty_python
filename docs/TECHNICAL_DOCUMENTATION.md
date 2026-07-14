@@ -3,7 +3,7 @@
 ## Scope and organization
 
 This repository is a set of 26 independent Python exercises rather than one
-application or package. Each root-level `.py` file demonstrates a focused topic
+application or package. Each `.py` file in `src/` demonstrates a focused topic
 from the Programming Paradigms course and uses only the Python standard library.
 
 | Area | Principal files |
@@ -54,17 +54,19 @@ raising an exception.
 Run an individual exercise from the repository root:
 
 ```bash
-python my_range.py
-python "wariancja rek.py"
+python src/my_range.py
+python 'src/wariancja rek.py'
 ```
 
-Reusable/tested modules have `if __name__ == "__main__":` guards where needed.
-Some original demonstration scripts intentionally execute immediately when
-imported, including `100comb.py`, `choinka.py`, `findA.py`, `findAv2.py`,
-`kontakty.py`, `krotki.py`, `liczyPierwsze.py`, `napis.py`, `przestepne.py` and
-`zgadujZgadula.py`. Treat those files as standalone programs, not library
-modules. Several prompt for console input, so importing them from tooling can
-block waiting for a response.
+All exercises use `if __name__ == "__main__":` guards, so they can be loaded by
+the demonstration runner without starting prompts or producing output during
+import. Interactive behavior is preserved when a script is executed directly.
+
+Run a compact, non-interactive demonstration of all exercises with:
+
+```bash
+python demo/main.py
+```
 
 ## Automated tests
 

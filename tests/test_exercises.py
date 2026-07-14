@@ -1,6 +1,11 @@
 import contextlib
 import io
+import sys
 import unittest
+from pathlib import Path
+
+SOURCE_DIR = Path(__file__).resolve().parents[1] / 'src'
+sys.path.insert(0, str(SOURCE_DIR))
 
 from dekorator_my_range import my_range as decorated_range
 from fraction import Fraction

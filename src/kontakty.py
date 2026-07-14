@@ -13,4 +13,5 @@ def main():
     print("Numery telefonu Kowalskich >>", fun(kontakty, "Kowalski"))
 
 
-main()
+if __name__ == '__main__':
+    main()

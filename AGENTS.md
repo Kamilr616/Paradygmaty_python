@@ -9,13 +9,16 @@ number-word parser, and assorted beginner scripts. Files use Polish names
 (e.g. `choinka.py`, `przestepne.py`, `liczyPierwsze.py`).
 
 ## Layout
-- Individual exercise scripts at the repo root (one topic each).
-- `reduce.py`, `fraction.py`, `liczba.py`, `my_range.py`, `generator.py`,
-  `iterator.py`, `dekorator_my_range.py` — the ones covered by tests.
+- Individual exercise scripts in `src/` (one topic each).
+- `src/reduce.py`, `src/fraction.py`, `src/liczba.py`, `src/my_range.py`,
+  `src/generator.py`, `src/iterator.py`, `src/dekorator_my_range.py` — the ones
+  covered by tests.
+- `demo/main.py` — a non-interactive overview of all exercises.
 - `tests/test_exercises.py` — regression tests.
 
 ## Build / run / test
-- Run any script directly: `python <script>.py`.
+- Run any script directly: `python src/<script>.py`.
+- Run the complete demo: `python demo/main.py`.
 - Tests: `python -m unittest discover -s tests -v`.
 
 ## Conventions & good practices

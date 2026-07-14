@@ -7,9 +7,11 @@
 
 > 🗓️ **Okres realizacji:** 2023
 
-> 📘 [Dokumentacja techniczna](docs/TECHNICAL_DOCUMENTATION.pl.md) · [English](docs/TECHNICAL_DOCUMENTATION.md)
+> 📘 [Dokumentacja techniczna](docs/TECHNICAL_DOCUMENTATION.pl.md)
 
 Zbiór rozwiązanych zadań z przedmiotu **Paradygmaty Programowania**. Większość skryptów to samodzielne rozwiązania demonstrujące konkretny koncept Pythona — od podstawowych algorytmów i rekurencji, przez programowanie obiektowe, po iteratory, generatory, dekoratory i programowanie funkcyjne. Kurs obejmował style **imperatywny, obiektowy i funkcyjny** w Pythonie, więc repo stanowi też zwięzły przegląd tych podstaw.
+
+Wszystkie skrypty z ćwiczeniami znajdują się w katalogu `src/`.
 
 ## 📚 Omawiane zagadnienia
 
@@ -31,12 +33,22 @@ Zbiór rozwiązanych zadań z przedmiotu **Paradygmaty Programowania**. Większo
 - 🧮 **`reduce.py`** — średnia, maksimum i spłaszczanie listy wyłącznie przez `functools.reduce`
 - 📐 **`figury.py`** / **`bryly.py`** — obiektowe hierarchie klas dla figur 2D i brył 3D
 
-## 🚀 Uruchamianie
+## ▶️ Demo
 
-Każdy plik jest niezależny — dowolne zadanie uruchomisz bezpośrednio:
+[Runner demonstracyjny](demo/main.py) prezentuje krótki przykład z każdego z 26
+ćwiczeń. Dla skryptów interaktywnych automatycznie podaje przykładowe dane, dzięki
+czemu cały zbiór można obejrzeć podczas jednego uruchomienia:
 
 ```bash
-python bisekcja.py
+python demo/main.py
+```
+
+## 🚀 Uruchamianie
+
+Każdy plik jest niezależny — dowolne zadanie uruchomisz z katalogu repozytorium:
+
+```bash
+python src/bisekcja.py
 ```
 
 Nie są wymagane żadne zewnętrzne zależności (wyłącznie biblioteka standardowa Pythona 3).

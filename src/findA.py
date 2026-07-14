@@ -8,4 +8,5 @@ def main():
     print("Liczba znalezionych znaków to", count)
 
 
-main()
+if __name__ == '__main__':
+    main()

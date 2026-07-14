@@ -6,4 +6,5 @@ def main():
     print("Lata przestępne >>", fun(1900, 2000))
 
 
-main()
+if __name__ == '__main__':
+    main()

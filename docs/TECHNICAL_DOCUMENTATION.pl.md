@@ -3,7 +3,7 @@
 ## Zakres i organizacja
 
 Repozytorium jest zbiorem 26 niezależnych ćwiczeń Python, a nie jedną aplikacją
-lub pakietem. Każdy plik `.py` w katalogu głównym pokazuje wybrany temat z kursu
+lub pakietem. Każdy plik `.py` w katalogu `src/` pokazuje wybrany temat z kursu
 Paradygmaty programowania i korzysta wyłącznie z biblioteki standardowej.
 
 | Obszar | Główne pliki |
@@ -52,16 +52,20 @@ oryginalny komunikat `Nieprawidłowe dane`, zamiast zgłaszać wyjątek.
 Wybrane ćwiczenie uruchamia się z katalogu repozytorium:
 
 ```bash
-python my_range.py
-python "wariancja rek.py"
+python src/my_range.py
+python 'src/wariancja rek.py'
 ```
 
-Moduły używane ponownie lub testowane mają w potrzebnych miejscach guard
-`if __name__ == "__main__":`. Część oryginalnych demonstracji wykonuje się od razu
-przy imporcie: `100comb.py`, `choinka.py`, `findA.py`, `findAv2.py`, `kontakty.py`,
-`krotki.py`, `liczyPierwsze.py`, `napis.py`, `przestepne.py` i
-`zgadujZgadula.py`. Są to samodzielne programy, a nie moduły biblioteczne. Niektóre
-czekają na wejście konsolowe, więc ich import z narzędzia może się zablokować.
+Wszystkie ćwiczenia mają guard `if __name__ == "__main__":`, dzięki czemu runner
+demonstracyjny może je wczytać bez uruchamiania pytań ani wypisywania wyników
+podczas importu. Zachowanie interaktywne pozostaje bez zmian przy bezpośrednim
+uruchomieniu skryptu.
+
+Zwięzłą, nieinteraktywną demonstrację wszystkich ćwiczeń uruchamia polecenie:
+
+```bash
+python demo/main.py
+```
 
 ## Testy automatyczne
 

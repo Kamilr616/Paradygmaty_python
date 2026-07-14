@@ -7,4 +7,5 @@ def main():
             print("Index to:", count, "Znak to:", x)
 
 
-main()
+if __name__ == '__main__':
+    main()

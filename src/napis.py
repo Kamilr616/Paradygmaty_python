@@ -22,4 +22,5 @@ def main():
     print(napis(input("Wprowadź liczbę >>")))
 
 
-main()
+if __name__ == '__main__':
+    main()

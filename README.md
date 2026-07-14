@@ -3,13 +3,15 @@
 [![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> 🇵🇱 [Wersja polska](README.pl.md)
+> 🇵🇱 [Polish version](README.pl.md)
 
 > 🗓️ **Project period:** 2023
 
-> 📘 [Technical documentation](docs/TECHNICAL_DOCUMENTATION.md) · [Polski](docs/TECHNICAL_DOCUMENTATION.pl.md)
+> 📘 [Technical documentation](docs/TECHNICAL_DOCUMENTATION.md)
 
 A collection of solved exercises from the **Programming Paradigms** university course. Most scripts are self-contained solutions demonstrating a specific Python concept — from basic algorithms and recursion to object-oriented programming, iterators, generators, decorators, and functional programming. The course spanned the **imperative, object-oriented and functional** styles in Python, so this repo doubles as a compact reference of those fundamentals.
+
+All exercise scripts are stored in the `src/` directory.
 
 ## 📚 Topics covered
 
@@ -31,12 +33,22 @@ A collection of solved exercises from the **Programming Paradigms** university c
 - 🧮 **`reduce.py`** — mean, maximum and list-flattening expressed purely with `functools.reduce`
 - 📐 **`figury.py`** / **`bryly.py`** — OOP class hierarchies for 2D shapes and 3D solids
 
-## 🚀 Running
+## ▶️ Demo
 
-Each file is independent — run any exercise directly:
+The [demo runner](demo/main.py) presents a short example from each of the 26
+exercises. It supplies sample input automatically for interactive scripts, so
+the complete collection can be reviewed in one run:
 
 ```bash
-python bisekcja.py
+python demo/main.py
+```
+
+## 🚀 Running
+
+Each file is independent — run any exercise from the repository root:
+
+```bash
+python src/bisekcja.py
 ```
 
 No external dependencies are required (Python 3 standard library only).

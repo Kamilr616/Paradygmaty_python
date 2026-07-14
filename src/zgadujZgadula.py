@@ -22,4 +22,5 @@ def main():
         print("Koniec prób!")
 
 
-main()
+if __name__ == '__main__':
+    main()

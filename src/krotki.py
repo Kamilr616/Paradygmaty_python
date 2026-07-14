@@ -12,4 +12,5 @@ def main():
     print(lista2, " -> ", suma(lista2))
 
 
-main()
+if __name__ == '__main__':
+    main()

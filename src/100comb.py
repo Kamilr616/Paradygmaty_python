@@ -10,4 +10,5 @@ def main():
     print("Liczba kombinacji wynosi:", comb)
 
 
-main()
+if __name__ == '__main__':
+    main()
